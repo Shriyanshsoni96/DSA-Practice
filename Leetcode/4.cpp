@@ -1,24 +1,58 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
-int main(){
-int num1[]={1,2};
-int num2[]={3,4};
+vector<int> merge(vector<int>& nums1, vector<int>& nums2){
+    vector<int> nums;
+    //merging two sorted lists to nums 
+    int i=0;
+    int j=0;
 
-int m = sizeof(num1)/sizeof(int);
-int n = sizeof(num2)/sizeof(int);
-int merge[m+n];
-for(int i = 0 ; i<m;i++)
-{
-    merge[i]=num1[i];
+    int n = nums1.size();
+    int m = nums2.size();
+
+    while(i<n && j<m){
+        if(nums1[i]<=nums2[j]){
+            nums.push_back(nums1[i]);
+            i++;
+        }
+        else if(nums1[i]>nums2[j]){
+            nums.push_back(nums2[j]);
+            j++;
+        }
+    }
+
+    while(i<n){
+        nums.push_back(nums1[i]);
+        i++;
+    }
+
+    while(j<m){
+        nums.push_back(nums2[j]);
+        j++;
+    }
+
+    return nums;
 }
-for(int i = 0 ; i<n ;i++)
-{
-    merge[i+m] = num2[i];
+
+double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    double median = 0;
+    vector<int> nums = merge(nums1,nums2);
+    int s = nums.size();
+    
+    //finding middle value then median
+    if(s%2!=0){
+        int mid = s/2;
+        median = nums[mid];
+    }
+    else{
+        int mid1 = s/2;
+        int mid2 = (s/2)-1;
+        median = (double)(nums[mid1] + nums[mid2])/2; //making ek operand double varna 2 ayega instead of 2.5, integer division and double division 
+    }
+
+    return median;
 }
-int mid=sizeof(m+n)/2;
-
-float ans = (merge[mid]+merge[mid-1]);
-cout<<ans/2;
-return 0;
-
+int main() {
+    
+    return 0;
 }
