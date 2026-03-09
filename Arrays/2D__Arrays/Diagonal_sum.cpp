@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int digsum(int arr[][3],int rows, int clms)
+int digsum(int arr[][4],int rows, int clms)
 {
     //for sum of right diagonal
 int sum=0;
@@ -21,7 +21,8 @@ for(int i = 0 ; i < rows ; i++)
 return sum;
 }
 int main(){
-int arr[3][3]={{1,2,3},{4,5,6},{7,8,9}};
-int rows= 3 ,clm=3;
+int arr[4][4]={{1,1,1,1},{1,1,1,1},{1,1,1,1},{1,1,1,1}};
+int rows= 4 ,clm=4;
+
 cout<<digsum(arr,rows,clm);
 }
