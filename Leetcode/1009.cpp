@@ -1,7 +1,9 @@
-class Solution {
-public:
-    int findComplement(int n) {
-        
+#include<iostream>
+using namespace std;
+int main(){
+    int n = 5;
+
+  
         if(n == 0) return 1;
 
         int ans = 0;
@@ -17,7 +19,6 @@ public:
             power *= 2;
             n /= 2;
         }
-
-        return ans;
-    }
-};
+ cout<<ans;
+return 0;
+}

@@ -8,10 +8,10 @@ int rev(int n ){
             rev=rev*10+k;
             n=n/10;                 
     }
+    cout<<rev<<endl;
     return rev;
 }
 int main() {
-
 int n;
 cin>>n;
 int bn = 1;
@@ -21,5 +21,6 @@ while(n>0)
     bn = bn*10+k;
     n=n/2;
 }
+cout<<bn<<endl;
 cout<<rev(bn)/10<<" ";
 }
