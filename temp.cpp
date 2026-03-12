@@ -1,23 +1,29 @@
-class Solution {
-public:
-    int findComplement(int n) {
-        
-        if(n == 0) return 1;
+#include <bits/stdc++.h>
+using namespace std;
 
-        int ans = 0;
-        int power = 1;
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
-        while(n > 0){
-            
-            int bit = n % 2;     // get last binary bit
-            int flip = 1 - bit;  // flip it
-            
-            ans += flip * power;
+    int t;
+    cin >> t;
 
-            power *= 2;
-            n /= 2;
+    while(t--) {
+        int n;
+        cin >> n;
+
+        vector<long long> a(n);
+        for(int i = 0; i < n; i++)
+            cin >> a[i];
+
+        int operations = 0;
+
+        for(int i = 1; i < n; i++) {
+            if((a[i] % 2) == (a[i-1] % 2))
+                operations++;
         }
-
-        return ans;
+        cout << operations << "\n";
     }
-};
+
+    return 0;
+}
