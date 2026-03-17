@@ -1,48 +1,38 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
+#include<vector>
+#include<algorithm>
 using namespace std;
 
 int main() {
-
-    int n, m, k, s;
-    cin >> n >> m >> k >> s;
-
-    vector<vector<char>> p(n, vector<char>(m));
-
+    int n , c;
+    cin>>n>>c;
+   vector<int> a(n); 
     for(int i = 0; i < n; i++)
-        for(int j = 0; j < m; j++)
-            cin >> p[i][j];
-
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < m; j++) {
-
-            if(s <= k) break;
-
-            if(p[i][j] == '.') {
-                s -= 2;
-            }
-            else if(p[i][j] == '*') {
-                s += 5;
-            }
-            else if(p[i][j] == '#') {
-                break;
-            }
-
-            if(j != m - 1)
-                s -= 1;
+    { 
+        cin>>a[i];
+    }
+    sort(a.begin(),a.end());
+    int right= n-1;
+    int m = a[right]/c;
+    int temp=0;
+    for(int i = 0; i < n; i++)
+    { 
+        if(i==0)
+        {
+            temp=a[i]+m;
+            cout<<a[i]<<" ";
         }
+        else if(temp =a[i])
+        {
+            cout<<a[i]<<" ";
+            temp=a[i]+m;
 
-        if(s <= k)
-            break;
-    }
-
-    if(s >= k) {
-        cout << "Yes\n";
-        cout << s;
-    }
-    else {
-        cout << "No";
-    }
-
-    return 0;
+        }
+        else if(temp<=a[i] && a[i]>temp)
+        {
+            cout<<a[i]<<" ";
+            temp=a[i]+m;
+        }
+    }   
+   
 }
