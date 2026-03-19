@@ -1,32 +1,14 @@
 #include<iostream>
+#include<string>
 using namespace std;
+int main(){
+    string s = "ILoveIndia";
+    string s2 = " ";
 
-int main() {
-    int n;
-    cin >> n;
-
-    int arr[n][n];
-
-    
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            cin >> arr[i][j];
+    for(int i =0;i<s.length();i++){
+        if(isupper(s[i])){
+            s2.push_back(s[i]);
         }
     }
-
-    int flag = 1; 
-
-
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(i < j && arr[i][j] != 0){
-                flag = 0; 
-            }
-        }
-    }
-
-    if(flag == 1)
-        cout << "true";
-    else
-        cout << "false";
+    cout<<s2;
 }
