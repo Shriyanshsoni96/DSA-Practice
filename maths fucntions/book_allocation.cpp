@@ -11,7 +11,6 @@ bool isvalid(vector<int>& arr , int mid, int m )
 
     for(int i : arr){
         if(i > mid) return false;
-
         if(cur + i <= mid)
         {
             cur += i;
@@ -30,7 +29,7 @@ bool isvalid(vector<int>& arr , int mid, int m )
 int main()
 {   
     int m = 2; 
-    vector<int> arr ={10,20,30,40};
+    vector<int> arr ={12,34,67,90};
 
     int s = *max_element(arr.begin(),arr.end());
     int e = accumulate(arr.begin(), arr.end(),0);

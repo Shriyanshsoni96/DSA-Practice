@@ -1,16 +1,33 @@
 #include <iostream>
+#include <vector>
 #include <algorithm>
 using namespace std;
 
-int main() {
-    string s ="abcd";
-    string t = "myname";
-    s= "sassad1";
-    int temp = 0;
+int canEat(vector<int>& piles, int h, int k) {
+    long long hours = 0;
 
-    for(auto c : s)
-    {
-        cout<<c<<" ";
+    for (int pile : piles) {
+        hours += (pile + k - 1) / k;
     }
-    return 0;
+    return hours;
+}
+
+int minEatingSpeed(vector<int>& piles, int h) {
+    int low = 1;
+    int high = *max_element(piles.begin(), piles.end());
+
+    int ans = high;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (canEat(piles, h, mid)) {
+            ans = mid;
+            high = mid - 1; 
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    return ans;
 }
