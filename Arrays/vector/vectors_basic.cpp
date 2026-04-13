@@ -22,6 +22,7 @@ cout<<"Last element: "<<a.back()<<endl;
 a.insert(a.begin()+2,3); //insert 3 at index 2
 
 // reverse the vector
+reverse(a.begin(),a.end());
 
 //sorting the vector
 // sort(a.begin(),a.end());
