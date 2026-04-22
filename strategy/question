@@ -1,0 +1,104 @@
+PHASE 1: Foundation (Soch banani hai)
+
+👉 Goal: Array ko feel karna, brute → optimized shift
+
+🔥 Questions:
+Two Sum 
+Best Time to Buy and Sell Stock
+Contains Duplicate
+Maximum Subarray
+Product of Array Except Self
+
+👉 Focus:
+Brute vs optimal compare kar
+Time complexity feel kar
+
+⚡ PHASE 2: Two Pointer Mastery
+
+👉 Goal: Sorted array = shortcut power
+
+🔥 Questions:
+Valid Palindrome
+Two Sum II
+Container With Most Water
+3Sum
+Remove Duplicates from Sorted Array
+
+👉 Focus:
+
+Kab left++ vs right--
+Sorted advantage samajh
+🌊 PHASE 3: Sliding Window (Game Changer)
+
+👉 Goal: Subarray problems fatafat
+
+🔥 Questions:
+Maximum Sum Subarray of Size K
+Longest Substring Without Repeating Characters
+Longest Repeating Character Replacement
+Minimum Window Substring
+Subarray Product Less Than K
+
+👉 Focus:
+
+Fixed vs variable window
+Expand + shrink logic
+🔍 PHASE 4: Binary Search + BSOA
+
+👉 Goal: Search nahi… decision making
+
+🔥 Questions:
+Binary Search
+Search in Rotated Sorted Array
+Find Peak Element
+Koko Eating Bananas
+Capacity to Ship Packages Within D Days
+
+👉 Focus:
+
+Monotonic thinking
+“Answer guess karke check karna”
+🧠 PHASE 5: Prefix Sum + Hashing
+
+👉 Goal: O(N²) → O(N)
+
+🔥 Questions:
+Subarray Sum Equals K
+Continuous Subarray Sum
+Longest Consecutive Sequence
+Majority Element
+
+👉 Focus:
+
+Map ka use
+Prefix sum pattern
+🧩 PHASE 6: Greedy + Intervals
+
+👉 Goal: Real interview level thinking
+
+🔥 Questions:
+Merge Intervals
+Insert Interval
+Non-overlapping Intervals
+Jump Game
+Gas Station
+
+👉 Focus:
+
+Sorting + decision making
+Local vs global optimum
+🏆 PHASE 7: Hard Level (Confidence Build)
+
+👉 Goal: Interview ready feel
+
+🔥 Questions:
+Trapping Rain Water
+Sliding Window Maximum
+Split Array Largest Sum
+Median of Two Sorted Arrays
+🎯 Kaise Kare (Real Strategy)
+
+👉 Roz:
+
+2–3 questions (exam time hai)
+Ek pattern pakad → usi ke 3 questions
