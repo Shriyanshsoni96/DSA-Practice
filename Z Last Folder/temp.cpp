@@ -7,7 +7,7 @@ int furthestDistance(string moves) {
     for(char ch : moves) {
         if(ch == 'L') L++;
         else if(ch == 'R') R++;
-        else blank++;
+        
     }
 
     int right = R + blank - L;
