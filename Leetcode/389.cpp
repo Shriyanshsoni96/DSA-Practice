@@ -1,30 +1,43 @@
 #include <iostream>
+#include <string>
+#include<unordered_map>
 using namespace std;
 
-bool isVowel(char c) {
-    c = tolower(c);
-    return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
-}
+char findTheDifference(string s, string t) {
+    // Approch 1 ; 
+    // int sum = 0;
+        // for(char ch : t) {
+        //     sum += ch;
+        // }
+        // for(char ch : s) {
+        //     sum -= ch;
+        // }
+        // return (char)sum;
 
-string reverseVowels(string s) {
-    int i = 0, j = s.length() - 1;
-
-    while (i < j) {
-        if (!isVowel(s[i])) {
-            i++;
-        }
-        else if (!isVowel(s[j])) {
-            j--;
-        }
-        else {
-            swap(s[i], s[j]);
-            i++;
-            j--;
-        }
-    }
-    return s;
+    // Approch 2 using map
+   unordered_map <char, int>mp;
+  for(char &ch : s)
+  {
+    mp[ch]++;
+  }
+  for(char &ch : t)
+  {
+    mp[ch]--;
+    if(mp[ch] < 0) return ch;
 }
+  }
+    
 
 int main() {
-    cout << reverseVowels("IceCreAm"); // AceCreIm
+    string s, t;
+
+    cout << "Enter s: ";
+    cin >> s;
+
+    cout << "Enter t: ";
+    cin >> t;
+
+    cout << findTheDifference(s, t);
+
+    return 0;
 }
