@@ -1,23 +1,13 @@
 #include <iostream>
+#include <vector>
+#include<unordered_map>
 using namespace std;
 
-int furthestDistance(string moves) {
-    int L = 0, R = 0, blank = 0;
-
-    for(char ch : moves) {
-        if(ch == 'L') L++;
-        else if(ch == 'R') R++;
-        else blank++;
-    }
-
-    int right = R + blank - L;
-    int left = L + blank - R;
-
-    return max(abs(right), abs(left));
-}
 
 int main() {
-    string moves = "L_RL__R";
-    cout << furthestDistance(moves);
+   vector<vector<int>> a = {{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};
+   int col=a[0].size()-1;
+  cout<<col;
+  cout<<a.size();
     return 0;
 }
