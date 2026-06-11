@@ -1,11 +1,25 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
+#include <climits>
 using namespace std;
-#include<vector>
-#include<limits>
-int main(){
-vector<int> nums={1,3,2};
-int k = 2;
-int min = INT16_MAX;
 
-return 0;
+int main() {
+    vector<int> nums = {1,3,2};
+    int k = 2;
+
+    int mn = INT_MAX;
+    int mx = INT_MIN;
+
+    for(auto i : nums) {
+        mn = min(mn, i);
+        mx = max(mx, i);
+    }
+
+    long long ans = 1LL * (mx - mn) * k;
+
+    cout << mx << endl;
+    cout << mn << endl;
+    cout << ans << endl;
+
+    return 0;
 }
