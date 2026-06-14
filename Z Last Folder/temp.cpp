@@ -1,13 +1,17 @@
 #include <iostream>
 #include <vector>
-#include<unordered_map>
+#include<algorithm>
 using namespace std;
-
-
 int main() {
-   vector<vector<int>> a = {{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};
-   int col=a[0].size()-1;
-  cout<<col;
-  cout<<a.size();
-    return 0;
+    vector<int>nums={1,2,3,4,5,6,7};
+    int n = nums.size();
+    int k=3; 
+    k=k%n;
+
+        reverse(nums.begin(),nums.end());
+        reverse(nums.begin(),nums.begin()+k);
+    for(auto i : nums)
+    {
+      cout<<i<<" ";
+    }    
 }
