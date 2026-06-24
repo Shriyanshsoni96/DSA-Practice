@@ -11,18 +11,6 @@ int maxbuilding(int n ,vector<vector<int>>& restrictions )
     int sum= 0 ;
     while(i<n)
     {
-        // if(i==0)
-        // {
-        //     ans[i]=0;
-        // }
-        // if(restrictions[a][0]==i)
-        // {
-        //  ans[i]=restrictions[a][1];
-        //  a++;
-        // }
-        // maxi=max(maxi,ans[i]);
-
-
     int m =restrictions.size();
     int b=0;
     for(int a = 0 ;a<m ;a++)
@@ -34,13 +22,6 @@ int maxbuilding(int n ,vector<vector<int>>& restrictions )
     }
     
 
-    // int m =restrictions.size();
-    // int b=0;
-    // for(int a = 0 ;a<m ;a++)
-    // {
-    //     restrictions[a][0]=b;
-    //     ans[b]=restrictions[a][1];
-    // }
     sort(ans.begin(),ans.end());
 
 
