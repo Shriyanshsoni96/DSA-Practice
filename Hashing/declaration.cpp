@@ -1,7 +1,9 @@
+// frerquency of array in the numbers 
+
 #include<iostream>
 using namespace std;
 int main()
-{
+{   
     int n =5;
     int arr[5]={1,2,1,4,3};
     int hash[13]={0};
