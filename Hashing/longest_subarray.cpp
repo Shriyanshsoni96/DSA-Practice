@@ -1,4 +1,8 @@
 // Longest subarray with the sum k of consicutive subarray 
+// using hashmap and the prefix sum .
+// time complexity is O(n*logn); 
+
+
 #include<map>
 #include<iostream>
 #include<climits>
