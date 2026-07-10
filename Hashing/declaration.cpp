@@ -20,5 +20,5 @@ int main()
         cin>>number;
         cout<<hash[number]<<endl;
         
-    }
+    }s
 }
