@@ -1,17 +1,21 @@
 #include <iostream>
 #include <vector>
-#include<algorithm>
+#include <algorithm>
+#include <string>
 using namespace std;
-int main() {
-    vector<int>nums={1,2,3,4,5,6,7};
-    int n = nums.size();
-    int k=3; 
-    k=k%n;
 
-        reverse(nums.begin(),nums.end());
-        reverse(nums.begin(),nums.begin()+k);
-    for(auto i : nums)
+int main() {
+    string word = "abc";
+    vector<string> pattern = {"a", "abc", "bc", "d"};
+    int count = 0;
+ for (auto i : pattern)
+{
+    if (word.find(i) != string::npos)
     {
-      cout<<i<<" ";
-    }    
+        count++;
+    }
+}
+    
+    cout << "Count: " << count << endl;
+    return 0;
 }
