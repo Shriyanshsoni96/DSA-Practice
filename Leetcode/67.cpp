@@ -1,19 +1,16 @@
-// Adding binary numbers
- #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 string addBinary(string a, string b) {
-    int i = a.size() - 1;  // last index of a
-    int j = b.size() - 1;  // last index of b
+    int i = a.size() - 1;  
+    int j = b.size() - 1;  
     int carry = 0;
-    
     string result = "";
-
     while(i >= 0 || j >= 0 || carry) {
         int sum = carry;
 
         if(i >= 0) {
-            sum += a[i] - '0';  // char → int
+            sum += a[i] - '0';  
             i--;
         }
 
@@ -21,14 +18,10 @@ string addBinary(string a, string b) {
             sum += b[j] - '0';
             j--;
         }
-
-        // result bit
-        result = char((sum % 2) + '0') + result;
-
-        // update carry
+        result.push_back((sum%2)+'0');
         carry = sum / 2;
     }
-
+    reverse(result.begin(),result.end());
     return result;
 }
 
