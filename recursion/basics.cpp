@@ -76,29 +76,68 @@ using namespace std;
 //     return 0 ; 
 // }
 
-void sortarray(vector<int>& nums , int n ,int i  ){
+//! checking the array is sorted or unsorted 
+// void sortarray(vector<int>& nums , int n ,int i  ){
+//     if(i==n){
+//         cout<<endl<<"Sorted array  ";
+//         return;
+//     }
+
+//     if(nums[i-1]<=nums[i]){
+//     sortarray(nums,n,i++);
+//     }
+//     else
+//     {
+//         cout<<"unsorted array";
+//         return ; 
+//     }
+    
+// }
+
+// int main (){
+//     vector<int> nums ={2,3,5,5,6,4};
+//     int n = nums.size();
+//     int i = 1 ; 
+
+//     sortarray(nums,n,i);
+//     return 0 ; 
+// }
+
+//! Finding the maximum of array
+// void maxofarray(vector<int>& nums , int n ,int i , int maxi ){
+//     if(i==n){
+//         cout<<maxi<<" ";
+//         return;
+//     }
+//     maxi=max(maxi,nums[i]);
+//     i++;
+//     maxofarray(nums,n,i,maxi);
+// }
+
+// int main (){
+//     vector<int> nums ={23,3,5,5,6,4};
+//     int n = nums.size();
+//     int i = 0; 
+//     int maxi = INT_MIN;
+//     maxofarray(nums,n,i,maxi);
+//     return 0 ; 
+// }
+
+void linearsaearch(vector<int>& nums , int n ,int i , int maxi ){
     if(i==n){
-        cout<<endl<<"Sorted array  ";
+        cout<<maxi<<" ";
         return;
     }
-
-    if(nums[i-1]<=nums[i]){
+    maxi=max(maxi,nums[i]);
     i++;
-    sortarray(nums,n,i);
-    }
-    else
-    {
-        cout<<"unsorted array";
-        return ; 
-    }
-    
+    maxofarray(nums,n,i,maxi);
 }
 
 int main (){
-    vector<int> nums ={2,3,5,5,6,4};
+    vector<int> nums ={23,3,5,5,6,4};
     int n = nums.size();
-    int i = 1 ; 
-
-    sortarray(nums,n,i);
+    int i = 0; 
+    int maxi = INT_MIN;
+    maxofarray(nums,n,i,maxi);
     return 0 ; 
 }
