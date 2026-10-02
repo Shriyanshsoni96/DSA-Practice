@@ -123,21 +123,24 @@ using namespace std;
 //     return 0 ; 
 // }
 
-void linearsaearch(vector<int>& nums , int n ,int i , int maxi ){
+void linearsearch(vector<int>& nums , int n ,int i , int target ){
     if(i==n){
-        cout<<maxi<<" ";
         return;
     }
-    maxi=max(maxi,nums[i]);
+    if(target==nums[i]) 
+    {   
+        cout<<i;
+        return ;
+    }
     i++;
-    maxofarray(nums,n,i,maxi);
+    linearsearch(nums,n,i,target);
 }
 
 int main (){
     vector<int> nums ={23,3,5,5,6,4};
     int n = nums.size();
     int i = 0; 
-    int maxi = INT_MIN;
-    maxofarray(nums,n,i,maxi);
+    int target = 5;
+    linearsearch(nums,n,i,target);
     return 0 ; 
 }
