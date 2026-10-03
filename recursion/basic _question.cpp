@@ -34,21 +34,21 @@ int main()
     return 0;
 }
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-int findMax(int arr[], int n)
-{
-    if(n == 1) return arr[0];
-    int maxFromRest = findMax(arr, n - 1);    
-    return max(arr[n - 1], maxFromRest);
-}
+// int findMax(int arr[], int n)
+// {
+//     if(n == 1) return arr[0];
+//     int maxFromRest = findMax(arr, n - 1);    
+//     return max(arr[n - 1], maxFromRest);
+// }
 
-int main()
-{
-    int arr[] = {3, 7, 2, 9, 5};
-    int n = 5;
+// int main()
+// {
+//     int arr[] = {3, 7, 2, 9, 5};
+//     int n = 5;
 
-    cout << findMax(arr, n);
-    return 0;
-}
+//     cout << findMax(arr, n);
+//     return 0;
+// }
